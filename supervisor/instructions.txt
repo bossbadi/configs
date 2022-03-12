@@ -1,0 +1,14 @@
+# install supervisor
+sudo apt install supervisor
+
+# make config file for process
+sudo nano /etc/supervisor/conf.d/lavalink.conf
+sudo nano /etc/supervisor/conf.d/botbadi.conf
+sudo nano /etc/supervisor/conf.d/BossBeats.conf
+
+# gopubby
+sudo nano /etc/supervisor/conf.d/gopubby.conf
+sudo nano /etc/supervisor/conf.d/auto.conf
+
+# restart supervisor
+sudo supervisorctl reload

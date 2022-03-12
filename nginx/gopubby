@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name gopubby.com;
+
+    location /static {
+        alias /home/ubuntu/gopubby/flaskblog/static;
+    }
+
+    location / {
+        proxy_pass http://localhost:8000;
+        include /etc/nginx/proxy_params;
+        proxy_redirect off;
+    }
+}
