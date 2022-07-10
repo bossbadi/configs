@@ -3,7 +3,7 @@ server {
     server_name gopubby.com;
 
     location /static {
-        alias /home/ubuntu/gopubby/flaskblog/static;
+        alias /var/www/gopubby/flaskblog/static;
     }
 
     location / {
