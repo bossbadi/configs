@@ -17,7 +17,7 @@ server {
 
     server_name penncap.org www.penncap.org;
 
-    root /var/www/html;
+    root /var/www/penncap;
     index index.php index.html index.htm index.nginx-debian.html;
 
     location / {
