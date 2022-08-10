@@ -1,6 +1,21 @@
 server {
     listen 80;
-    server_name gopubby.com;
+    listen [::]:80;
+    server_name gopubby.com www.gopubby.com;
+    return 302 https://$server_name$request_uri;
+}
+
+server {
+    # SSL configuration
+
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    ssl_certificate         /etc/ssl/gopubby_cert.pem;
+    ssl_certificate_key     /etc/ssl/gopubby_key.pem;
+    ssl_client_certificate /etc/ssl/cloudflare.crt;
+    ssl_verify_client on;
+
+    server_name gopubby.com www.gopubby.com;
 
     location /static {
         alias /var/www/gopubby/flaskblog/static;
