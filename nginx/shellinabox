@@ -1,0 +1,12 @@
+# shellinabox
+
+server {
+    listen 80;
+    server_name vm.gopubby.com;
+
+    location / {
+        proxy_pass http://localhost:4200;
+        include /etc/nginx/proxy_params;
+        proxy_redirect off;
+    }
+}
