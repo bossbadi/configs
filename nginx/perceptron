@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name perceptron.gopubby.com
+    server_name perceptron.gopubby.com;
 
     location / {
         proxy_pass http://localhost:3000;
