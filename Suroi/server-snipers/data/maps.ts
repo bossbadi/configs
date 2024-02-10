@@ -45,8 +45,8 @@ interface MapDefinition {
 
 export const Maps: Record<string, MapDefinition> = {
   main: {
-    width: 400,
-    height: 400,
+    width: 450,
+    height: 450,
     oceanSize: 32,
     beachSize: 32,
     rivers: {
@@ -62,18 +62,18 @@ export const Maps: Record<string, MapDefinition> = {
       port_complex: 0,
       armory: 0,
       refinery: 0,
-      warehouse: 0,
+      warehouse: 1,
       small_house: 1,
       mobile_home: 2,
-      porta_potty: 2,
-      container_3: 0,
-      container_4: 0,
-      container_5: 0,
-      container_6: 0,
-      container_7: 0,
-      container_8: 0,
-      container_9: 0,
-      container_10: 0,
+      porta_potty: 3,
+      container_3: 0, // green one way
+      container_4: 1, // green one-way large hole
+      container_5: 1, // blue one-way
+      container_6: 0, // blue one-way large hole
+      container_7: 0, // blue two-way
+      container_8: 1, // blue two-way small hole
+      container_9: 0, // yellow one-way
+      container_10: 1, // yellow two-way
     },
     obstacles: {
       oil_tank: 2,
@@ -81,23 +81,23 @@ export const Maps: Record<string, MapDefinition> = {
       oak_tree: 5,
       birch_tree: 5,
       pine_tree: 5,
-      regular_crate: 3,
-      flint_crate: 3,
-      aegis_crate: 3,
-      grenade_crate: 3,
-      rock: 5,
+      regular_crate: 5,
+      flint_crate: 5,
+      aegis_crate: 5,
+      grenade_crate: 5,
+      rock: 10,
       river_rock: 0,
-      bush: 3,
-      blueberry_bush: 3,
-      barrel: 2,
+      bush: 5,
+      blueberry_bush: 5,
+      barrel: 3,
       viking_chest: 2,
-      super_barrel: 1,
+      super_barrel: 3,
       melee_crate: 2,
-      gold_rock: 0,
+      gold_rock: 2,
       flint_stone: 0,
     },
     loots: {
-      ground_loot: 20,
+      ground_loot: 25,
     },
     places: [
       { name: "Your Mom", position: Vec.create(0.23, 0.2) },
