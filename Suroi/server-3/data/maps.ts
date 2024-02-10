@@ -84,7 +84,7 @@ export const Maps: Record<string, MapDefinition> = {
       regular_crate: 5,
       flint_crate: 5,
       aegis_crate: 5,
-      grenade_crate: 5,
+      grenade_crate: 15,
       rock: 10,
       river_rock: 0,
       bush: 10,
