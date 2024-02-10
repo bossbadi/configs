@@ -45,7 +45,7 @@ export class ThrowableProjectile extends BaseGameObject<ObjectCategory.Throwable
      *
      * Precise results obviously depend on the tickrate
      */
-    private static readonly _dragConstant = Math.pow(1.6, -2.0 / GameConstants.tickrate);
+    private static readonly _dragConstant = Math.pow(1.6, -1.0 / GameConstants.tickrate);
 
     /**
      * Used for creating extra drag on the projectile, in the same tickrate-independent manner
