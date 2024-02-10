@@ -60,12 +60,12 @@ export const Maps: Record<string, MapDefinition> = {
     },
     buildings: {
       port_complex: 0,
-      armory: 0,
+      armory: 1,
       refinery: 0,
-      warehouse: 1,
-      small_house: 1,
-      mobile_home: 2,
-      porta_potty: 3,
+      warehouse: 0,
+      small_house: 0,
+      mobile_home: 1,
+      porta_potty: 2,
       container_3: 0, // green one way
       container_4: 1, // green one-way large hole
       container_5: 1, // blue one-way
@@ -78,14 +78,14 @@ export const Maps: Record<string, MapDefinition> = {
     obstacles: {
       oil_tank: 2,
       // christmas_tree: 0, // winter mode
-      oak_tree: 5,
-      birch_tree: 5,
-      pine_tree: 5,
+      oak_tree: 3,
+      birch_tree: 3,
+      pine_tree: 3,
       regular_crate: 5,
       flint_crate: 5,
       aegis_crate: 5,
       grenade_crate: 5,
-      rock: 10,
+      rock: 5,
       river_rock: 0,
       bush: 5,
       blueberry_bush: 5,
@@ -94,18 +94,17 @@ export const Maps: Record<string, MapDefinition> = {
       super_barrel: 3,
       melee_crate: 2,
       gold_rock: 2,
-      flint_stone: 0,
+      flint_stone: 1,
     },
     loots: {
       ground_loot: 25,
     },
     places: [
-      { name: "Your Mom", position: Vec.create(0.23, 0.2) },
-      { name: "Yeet Poop", position: Vec.create(0.23, 0.8) },
-      { name: "Easetour", position: Vec.create(0.75, 0.2) },
-      { name: "Clogged Toilet", position: Vec.create(0.72, 0.8) },
-      { name: "Bloodbath", position: Vec.create(0.5, 0.35) },
-      { name: "Boss Zone", position: Vec.create(0.5, 0.65) },
+      { name: "Avernus", position: Vec.create(0.23, 0.2) },
+      { name: "Boss Area", position: Vec.create(0.75, 0.2) },
+      { name: "Ur Dead", position: Vec.create(0.5, 0.5) },
+      { name: "Smelly Farts", position: Vec.create(0.23, 0.8) },
+      { name: "Yatagarasu", position: Vec.create(0.72, 0.8) },
     ],
   },
   debug: {
