@@ -13,6 +13,9 @@ setup_server() {
     cd data/
     curl -O -f -s https://raw.githubusercontent.com/bossbadi/configs/master/Suroi/server-$1/data/maps.ts
     curl -O -f -s https://raw.githubusercontent.com/bossbadi/configs/master/Suroi/server-$1/data/lootTables.ts
+    cd ../objects/
+    curl -O -f -s https://raw.githubusercontent.com/bossbadi/configs/master/Suroi/server-$1/objects/bullets.ts
+    curl -O -f -s https://raw.githubusercontent.com/bossbadi/configs/master/Suroi/server-$1/objects/throwableProj.ts
 
     # build server
     cd /apps/suroi-$1/server/
