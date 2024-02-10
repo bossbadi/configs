@@ -100,12 +100,12 @@ export const Maps: Record<string, MapDefinition> = {
       ground_loot: 25,
     },
     places: [
-      { name: "Avernus", position: Vec.create(0.23, 0.2) },
+      { name: "Tidal Wave", position: Vec.create(0.23, 0.2) },
       { name: "Boss Area", position: Vec.create(0.75, 0.2) },
       { name: "Ur Dead", position: Vec.create(0.5, 0.5) },
       { name: "Smelly Farts", position: Vec.create(0.23, 0.8) },
       { name: "Yatagarasu", position: Vec.create(0.72, 0.8) },
-    ],
+    ], 
   },
   debug: {
     width: 1620,
