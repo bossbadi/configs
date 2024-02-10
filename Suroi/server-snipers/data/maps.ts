@@ -100,12 +100,9 @@ export const Maps: Record<string, MapDefinition> = {
       ground_loot: 25,
     },
     places: [
-      { name: "Your Mom", position: Vec.create(0.23, 0.2) },
-      { name: "Yeet Poop", position: Vec.create(0.23, 0.8) },
-      { name: "Easetour", position: Vec.create(0.75, 0.2) },
-      { name: "Clogged Toilet", position: Vec.create(0.72, 0.8) },
-      { name: "Bloodbath", position: Vec.create(0.5, 0.35) },
-      { name: "Boss Zone", position: Vec.create(0.5, 0.65) },
+      { name: "Avernus", position: Vec.create(0.25, 0.25) },
+      { name: "Easetour", position: Vec.create(0.7, 0.4) },
+      { name: "Clogged Toilet", position: Vec.create(0.4, 0.75) },
     ],
   },
   debug: {
