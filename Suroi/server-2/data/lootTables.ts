@@ -18,7 +18,10 @@ export const LootTables: Record<string, LootTable> = {
   ground_loot: {
     min: 1,
     max: 1,
-    loot: [{ tier: "snipers", weight: 1 }],
+    loot: [
+      { tier: "snipers", weight: 1 },
+      { tier: "healing_items", weight: 0.25 },
+    ],
   },
   regular_crate: {
     min: 1,
