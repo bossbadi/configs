@@ -3,6 +3,7 @@ export const Config = {
     1: { name: "Downtown", address: "suroi-1.gopubby.com", https: true },
     2: { name: "Sniper's Lair", address: "suroi-2.gopubby.com", https: true },
     3: { name: "Ricochet Arena", address: "suroi-3.gopubby.com", https: true },
+    4: { name: "Nade Arena", address: "suroi-4.gopubby.com", https: true },
   },
   defaultRegion: "1",
   mode: "normal",
