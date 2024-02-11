@@ -10,7 +10,6 @@ setup_server() {
     # download server config
     cd server/src/
     curl -O https://raw.githubusercontent.com/bossbadi/configs/master/Suroi/server-$1/config.ts
-    curl -O https://raw.githubusercontent.com/bossbadi/configs/master/Suroi/server-$1/map.ts
     cd data/
     curl -O -f -s https://raw.githubusercontent.com/bossbadi/configs/master/Suroi/server-$1/data/maps.ts
     curl -O -f -s https://raw.githubusercontent.com/bossbadi/configs/master/Suroi/server-$1/data/lootTables.ts
