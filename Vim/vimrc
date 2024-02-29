@@ -63,6 +63,9 @@ Plug 'Raimondi/delimitMate'
 
 call plug#end()
 
+" Turn on line numbers
+set number
+
 " Set color scheme
 let g:vim_monokai_tasty_italic = 1
 colorscheme vim-monokai-tasty
@@ -79,3 +82,7 @@ augroup myCmds
 au!
 autocmd VimEnter * silent !echo -ne "\e[2 q"
 augroup END
+
+" Highlight current line number
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+set cursorline
