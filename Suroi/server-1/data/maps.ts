@@ -30,6 +30,7 @@ interface MapDefinition {
     readonly maxWideWidth: number;
   };
 
+  readonly bridges?: Array<ReferenceTo<BuildingDefinition>>;
   readonly buildings?: Record<ReferenceTo<BuildingDefinition>, number>;
   readonly obstacles?: Record<ReferenceTo<ObstacleDefinition>, number>;
   readonly loots?: Record<keyof typeof LootTables, number>;
@@ -58,8 +59,12 @@ export const Maps: Record<string, MapDefinition> = {
       minWideWidth: 20,
       maxWideWidth: 25,
     },
+    bridges: ["small_bridge"],
     buildings: {
       port_complex: 0,
+      sea_traffic_control: 0,
+      tugboat_white: 0,
+      tugboat_red: 0,
       armory: 1,
       refinery: 0,
       warehouse: 0,
@@ -86,8 +91,10 @@ export const Maps: Record<string, MapDefinition> = {
       aegis_crate: 5,
       grenade_crate: 5,
       rock: 5,
+      river_chest: 0,
       river_rock: 0,
       bush: 5,
+      lily_pad: 0,
       blueberry_bush: 5,
       barrel: 3,
       viking_chest: 2,
@@ -328,8 +335,8 @@ export const Maps: Record<string, MapDefinition> = {
     beachSize: 32,
     oceanSize: 32,
     genCallback(map) {
-      //map.game.grid.addObject(new Decal(map.game, "mobile_home_decal", Vec.create(this.width / 2, this.height / 2), 0));
-      map.generateBuilding("mobile_home", Vec.create(this.width / 2, this.height / 2), 0);
+      //map.game.grid.addObject(new Decal(map.game, "sea_traffic_control_decal", Vec.create(this.width / 2, this.height / 2), 0));
+      map.generateBuilding("oil_tanker_ship", Vec.create(this.width / 2, this.height / 2), 0);
     },
   },
   singleObstacle: {
@@ -338,7 +345,7 @@ export const Maps: Record<string, MapDefinition> = {
     beachSize: 8,
     oceanSize: 8,
     genCallback(map) {
-      map.generateObstacle("mobile_home_sink", Vec.create(this.width / 2, this.height / 2), 0);
+      map.generateObstacle("control_panel", Vec.create(this.width / 2, this.height / 2), 0);
     },
   },
   singleGun: {
