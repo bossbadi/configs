@@ -24,7 +24,7 @@ export const Config = {
 
     maxPlayersPerGame: 80,
     maxGames: 3,
-    preventJoinAfter: 60000,
+    preventJoinAfter: 10 * 60 * 1000, // 10 minutes
 
     gas: { mode: GasMode.Normal },
 
