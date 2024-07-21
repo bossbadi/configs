@@ -6,11 +6,11 @@ Set-PSReadLineKeyHandler -Chord 'ctrl+x,ctrl+e' -ScriptBlock {
   $editor = if ($env:EDITOR) { $env:EDITOR }
   else { 'notepad' }
   $line = $cursor = $proc = $null
-  $editorArgs = @( '-c', '"set syntax=ps1"' )
+  $editorArgs = @('-c','"set syntax=ps1"')
   try {
     $tmpf = New-TemporaryFile
     # Get current content
-    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref] $line, [ref] $cursor)
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line,[ref]$cursor)
     # If (n)vim, start at last line
     if ($editor -match 'vim') {
       $editorArgs += '+'
@@ -18,7 +18,7 @@ Set-PSReadLineKeyHandler -Chord 'ctrl+x,ctrl+e' -ScriptBlock {
     $line > $tmpf.FullName
     $editorArgs += $tmpf.FullName
     # Need to wait for editor to be closed
-    $proc = Start-Process $editor -NoNewWindow -PassThru -ArgumentList $editorArgs
+    $proc = Start-Process $editor -NoNewWindow -Passthru -ArgumentList $editorArgs
     $proc.WaitForExit()
     $proc = $null
     # Clean prompt
