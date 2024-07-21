@@ -12,7 +12,7 @@ Set-PSReadLineKeyHandler -Chord 'ctrl+x,ctrl+e' -ScriptBlock {
     # Get current content
     [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref] $line, [ref] $cursor)
     # If (n)vim, start at last line
-    if ( $editor -Like '*vim' ) {
+    if ($editor -match 'vim') {
       $editorArgs += '+'
     }
     $line > $tmpf.FullName
